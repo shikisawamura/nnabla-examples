@@ -115,7 +115,8 @@ def main():
     pred = np.squeeze(pred, axis=1)
     pred = pred[0]
     pred = 2*(pred - np.min(pred))/np.ptp(pred)-1
-    imsave('stereo_depth.png', (pred + 1) * 0.5))
+    #imsave('stereo_depth.png', (pred + 1) * 0.5))
+    imsave('stereo_depth.png', pred)
 
     print("Done")
 
