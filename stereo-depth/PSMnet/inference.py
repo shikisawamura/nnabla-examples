@@ -116,8 +116,9 @@ def main():
     pred = pred[0]
     pred = 2*(pred - np.min(pred))/np.ptp(pred)-1
     #imsave('stereo_depth.png', (pred + 1) * 0.5))
-    imsave('stereo_depth.png', pred)
-
+    #imsave('stereo_depth.png', pred)
+    scipy.misc.imsave('stereo_depth.png', pred)
+    
     print("Done")
 
     # Save NNP file (used in C++ inference later.).
